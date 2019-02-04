@@ -14,6 +14,8 @@
 		E102F91B2207F573002CBE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E102F9192207F573002CBE68 /* LaunchScreen.storyboard */; };
 		E102F9262207F573002CBE68 /* AreanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F9252207F573002CBE68 /* AreanTests.swift */; };
 		E102F9312207F573002CBE68 /* AreanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F9302207F573002CBE68 /* AreanUITests.swift */; };
+		E102F9402207F6A6002CBE68 /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F93F2207F6A6002CBE68 /* MainPageController.swift */; };
+		E102F9422207FB58002CBE68 /* cameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F9412207FB58002CBE68 /* cameraController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		E102F92C2207F573002CBE68 /* AreanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AreanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E102F9302207F573002CBE68 /* AreanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreanUITests.swift; sourceTree = "<group>"; };
 		E102F9322207F573002CBE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E102F93F2207F6A6002CBE68 /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
+		E102F9412207FB58002CBE68 /* cameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		E102F90F2207F572002CBE68 /* Arean */ = {
 			isa = PBXGroup;
 			children = (
+				E102F93E2207F688002CBE68 /* controller */,
 				E102F9102207F572002CBE68 /* AppDelegate.swift */,
 				E102F9122207F572002CBE68 /* ViewController.swift */,
 				E102F9142207F572002CBE68 /* Main.storyboard */,
@@ -123,6 +128,15 @@
 				E102F9322207F573002CBE68 /* Info.plist */,
 			);
 			path = AreanUITests;
+			sourceTree = "<group>";
+		};
+		E102F93E2207F688002CBE68 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E102F93F2207F6A6002CBE68 /* MainPageController.swift */,
+				E102F9412207FB58002CBE68 /* cameraController.swift */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E102F9402207F6A6002CBE68 /* MainPageController.swift in Sources */,
 				E102F9132207F572002CBE68 /* ViewController.swift in Sources */,
+				E102F9422207FB58002CBE68 /* cameraController.swift in Sources */,
 				E102F9112207F572002CBE68 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
