@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73FC47FA84FF7803AD3C4DE9 /* Pods_Arean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4652BE3D5EA2E84F8402E716 /* Pods_Arean.framework */; };
 		E102F9112207F572002CBE68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F9102207F572002CBE68 /* AppDelegate.swift */; };
 		E102F9132207F572002CBE68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F9122207F572002CBE68 /* ViewController.swift */; };
 		E102F9162207F572002CBE68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E102F9142207F572002CBE68 /* Main.storyboard */; };
@@ -14,8 +15,10 @@
 		E102F91B2207F573002CBE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E102F9192207F573002CBE68 /* LaunchScreen.storyboard */; };
 		E102F9262207F573002CBE68 /* AreanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F9252207F573002CBE68 /* AreanTests.swift */; };
 		E102F9312207F573002CBE68 /* AreanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F9302207F573002CBE68 /* AreanUITests.swift */; };
-		E102F9402207F6A6002CBE68 /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F93F2207F6A6002CBE68 /* MainPageController.swift */; };
 		E102F9422207FB58002CBE68 /* cameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F9412207FB58002CBE68 /* cameraController.swift */; };
+		E1512DCC2208375400E2544D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1512DCB2208375300E2544D /* GoogleService-Info.plist */; };
+		E1512DCF22083AB100E2544D /* CameraControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1512DCE22083AB100E2544D /* CameraControllerData.swift */; };
+		E1890C922209690A00DF1355 /* areaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1890C912209690A00DF1355 /* areaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E3E97FF44FE6EFFBD6D3DD6 /* Pods-Arean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arean.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Arean/Pods-Arean.debug.xcconfig"; sourceTree = "<group>"; };
+		4652BE3D5EA2E84F8402E716 /* Pods_Arean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Arean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ECED3B48BD51DD3FCD8C709 /* Pods-Arean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arean.release.xcconfig"; path = "Pods/Target Support Files/Pods-Arean/Pods-Arean.release.xcconfig"; sourceTree = "<group>"; };
 		E102F90D2207F572002CBE68 /* Arean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E102F9102207F572002CBE68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E102F9122207F572002CBE68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,8 +55,10 @@
 		E102F92C2207F573002CBE68 /* AreanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AreanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E102F9302207F573002CBE68 /* AreanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreanUITests.swift; sourceTree = "<group>"; };
 		E102F9322207F573002CBE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E102F93F2207F6A6002CBE68 /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
 		E102F9412207FB58002CBE68 /* cameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraController.swift; sourceTree = "<group>"; };
+		E1512DCB2208375300E2544D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1512DCE22083AB100E2544D /* CameraControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControllerData.swift; sourceTree = "<group>"; };
+		E1890C912209690A00DF1355 /* areaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = areaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73FC47FA84FF7803AD3C4DE9 /* Pods_Arean.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99F3D30E23B48DFA5D5FFC4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E3E97FF44FE6EFFBD6D3DD6 /* Pods-Arean.debug.xcconfig */,
+				9ECED3B48BD51DD3FCD8C709 /* Pods-Arean.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B22001038E75CC5D38F59CD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4652BE3D5EA2E84F8402E716 /* Pods_Arean.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E102F9042207F572002CBE68 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +111,8 @@
 				E102F9242207F573002CBE68 /* AreanTests */,
 				E102F92F2207F573002CBE68 /* AreanUITests */,
 				E102F90E2207F572002CBE68 /* Products */,
+				99F3D30E23B48DFA5D5FFC4B /* Pods */,
+				B22001038E75CC5D38F59CD3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +129,7 @@
 		E102F90F2207F572002CBE68 /* Arean */ = {
 			isa = PBXGroup;
 			children = (
+				E1512DCD22083AA300E2544D /* FireBase */,
 				E102F93E2207F688002CBE68 /* controller */,
 				E102F9102207F572002CBE68 /* AppDelegate.swift */,
 				E102F9122207F572002CBE68 /* ViewController.swift */,
@@ -108,6 +137,7 @@
 				E102F9172207F573002CBE68 /* Assets.xcassets */,
 				E102F9192207F573002CBE68 /* LaunchScreen.storyboard */,
 				E102F91C2207F573002CBE68 /* Info.plist */,
+				E1512DCB2208375300E2544D /* GoogleService-Info.plist */,
 			);
 			path = Arean;
 			sourceTree = "<group>";
@@ -133,10 +163,18 @@
 		E102F93E2207F688002CBE68 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				E102F93F2207F6A6002CBE68 /* MainPageController.swift */,
 				E102F9412207FB58002CBE68 /* cameraController.swift */,
+				E1890C912209690A00DF1355 /* areaViewController.swift */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		E1512DCD22083AA300E2544D /* FireBase */ = {
+			isa = PBXGroup;
+			children = (
+				E1512DCE22083AB100E2544D /* CameraControllerData.swift */,
+			);
+			path = FireBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E102F9352207F573002CBE68 /* Build configuration list for PBXNativeTarget "Arean" */;
 			buildPhases = (
+				3E550A5E98AC8C81D6160300 /* [CP] Check Pods Manifest.lock */,
 				E102F9092207F572002CBE68 /* Sources */,
 				E102F90A2207F572002CBE68 /* Frameworks */,
 				E102F90B2207F572002CBE68 /* Resources */,
+				24CC35F70644C25D54C49734 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E102F91B2207F573002CBE68 /* LaunchScreen.storyboard in Resources */,
+				E1512DCC2208375400E2544D /* GoogleService-Info.plist in Resources */,
 				E102F9182207F573002CBE68 /* Assets.xcassets in Resources */,
 				E102F9162207F572002CBE68 /* Main.storyboard in Resources */,
 			);
@@ -265,14 +306,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24CC35F70644C25D54C49734 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Arean/Pods-Arean-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Arean/Pods-Arean-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E550A5E98AC8C81D6160300 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Arean-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E102F9092207F572002CBE68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E102F9402207F6A6002CBE68 /* MainPageController.swift in Sources */,
 				E102F9132207F572002CBE68 /* ViewController.swift in Sources */,
+				E1512DCF22083AB100E2544D /* CameraControllerData.swift in Sources */,
 				E102F9422207FB58002CBE68 /* cameraController.swift in Sources */,
+				E1890C922209690A00DF1355 /* areaViewController.swift in Sources */,
 				E102F9112207F572002CBE68 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +541,7 @@
 		};
 		E102F9362207F573002CBE68 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E3E97FF44FE6EFFBD6D3DD6 /* Pods-Arean.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +560,7 @@
 		};
 		E102F9372207F573002CBE68 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ECED3B48BD51DD3FCD8C709 /* Pods-Arean.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
