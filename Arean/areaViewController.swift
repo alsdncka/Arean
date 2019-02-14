@@ -86,12 +86,13 @@ class AreaViewController:UIViewController{
         let date = dateFormatter.string(from: Date())
         
         DBRef.child("AreaImage").queryOrdered(byChild: "timestamp").queryLimited(toLast: 1).observe(.childAdded) { (DataSnapshot) in
+            let value = DataSnapshot.value as? NSDictionary
             
-            Storage.storage().reference(withPath: "AreaImage/"+date+"/"+DataSnapshot.key+".jpg").getData(maxSize: 5*1024*1024 , completion: { iData, error in
+            Storage.storage().reference(withPath: "AreaImage/"+(value?["date"] as! String)+"/"+DataSnapshot.key+".jpg").getData(maxSize: 5*1024*1024 , completion: { iData, error in
                 if let Err = error {
                     print(Err)
                 }else{
-                    print(DataSnapshot.key)
+                   
                     let image = UIImage(data: iData!)
                     let imageView = UIImageView()
                     imageView.image=image
@@ -109,6 +110,11 @@ class AreaViewController:UIViewController{
                     })
                     self.afterView = imageView
                     
+                   
+                    self.DBRef.child("AreaView").child(DataSnapshot.key).setValue([UserDefaults.standard.value(forKey: "id") as! String:"true"])
+                    
+                    
+                    
                 }
             })
         }
@@ -118,8 +124,6 @@ class AreaViewController:UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         
         
-    
-        
         /*
         DBRef.child("AreaImage").child("경기도").child("안양시").child("석수동").child("2019-02-05").queryLimited(toLast: 1).observe(.childAdded , with: { (DataSnapshot) -> Void in
             print(DataSnapshot)
@@ -127,7 +131,9 @@ class AreaViewController:UIViewController{
         */
     }
     
+    
     override func viewDidDisappear(_ animated: Bool) {
-        DBRef.child("AreaImage").removeAllObservers()
+        //DBRef.child("AreaImage").removeAllObservers()
     }
+    
 }

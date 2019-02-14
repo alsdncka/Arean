@@ -19,6 +19,8 @@
 		E1512DCC2208375400E2544D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1512DCB2208375300E2544D /* GoogleService-Info.plist */; };
 		E1512DCF22083AB100E2544D /* CameraControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1512DCE22083AB100E2544D /* CameraControllerData.swift */; };
 		E1890C922209690A00DF1355 /* areaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1890C912209690A00DF1355 /* areaViewController.swift */; };
+		E1890C94220EC2C900DF1355 /* tabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1890C93220EC2C900DF1355 /* tabViewController.swift */; };
+		E1890C96220EC8BA00DF1355 /* myGalleyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1890C95220EC8BA00DF1355 /* myGalleyController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		E1512DCB2208375300E2544D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1512DCE22083AB100E2544D /* CameraControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControllerData.swift; sourceTree = "<group>"; };
 		E1890C912209690A00DF1355 /* areaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = areaViewController.swift; sourceTree = "<group>"; };
+		E1890C93220EC2C900DF1355 /* tabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabViewController.swift; sourceTree = "<group>"; };
+		E1890C95220EC8BA00DF1355 /* myGalleyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myGalleyController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 			children = (
 				E102F9412207FB58002CBE68 /* cameraController.swift */,
 				E1890C912209690A00DF1355 /* areaViewController.swift */,
+				E1890C93220EC2C900DF1355 /* tabViewController.swift */,
+				E1890C95220EC8BA00DF1355 /* myGalleyController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -366,8 +372,10 @@
 			files = (
 				E102F9132207F572002CBE68 /* ViewController.swift in Sources */,
 				E1512DCF22083AB100E2544D /* CameraControllerData.swift in Sources */,
+				E1890C96220EC8BA00DF1355 /* myGalleyController.swift in Sources */,
 				E102F9422207FB58002CBE68 /* cameraController.swift in Sources */,
 				E1890C922209690A00DF1355 /* areaViewController.swift in Sources */,
+				E1890C94220EC2C900DF1355 /* tabViewController.swift in Sources */,
 				E102F9112207F572002CBE68 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

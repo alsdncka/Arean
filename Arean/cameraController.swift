@@ -207,9 +207,7 @@ class CameraController:UIViewController,AVCapturePhotoCaptureDelegate,CLLocation
                 self.l_do=place?.last?.administrativeArea
                 self.l_si=place?.last?.locality
                 self.l_dong=place?.last?.subLocality
-                print(self.l_do)
-                print(self.l_si)
-                print(self.l_dong)
+      
                 self.locationManager.stopUpdatingLocation()
                 
             })
