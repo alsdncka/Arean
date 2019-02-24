@@ -14,17 +14,18 @@ class myGalleyController:UIViewController{
     
    
     var DBRef:DatabaseReference!
-    let userUid = UserDefaults.standard.value(forKey: "id") as! String
+    var userUid:String?
     override func viewDidLoad() {
         
         let storage = Storage.storage()
         DBRef = Database.database().reference()
         
+        userUid = UserDefaults.standard.value(forKey: "id") as! String
     }
     
     override func viewDidAppear(_ animated: Bool) {
        
-        DBRef.child("AreaGellay").child(userUid).queryOrdered(byChild: "timestamp").observe(.childAdded) { (DataSnapshot) in
+        DBRef.child("AreaGellay").child(userUid!).queryOrdered(byChild: "timestamp").observe(.childAdded) { (DataSnapshot) in
             
             print(DataSnapshot.value)
             
