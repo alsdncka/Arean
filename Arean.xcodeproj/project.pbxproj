@@ -22,6 +22,7 @@
 		E1890C94220EC2C900DF1355 /* tabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1890C93220EC2C900DF1355 /* tabViewController.swift */; };
 		E1890C96220EC8BA00DF1355 /* myGalleyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1890C95220EC8BA00DF1355 /* myGalleyController.swift */; };
 		E1890C982219A34000DF1355 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1890C972219A34000DF1355 /* mapViewController.swift */; };
+		E1FB96042225935E00E47AA2 /* collcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB96032225935E00E47AA2 /* collcell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E1890C93220EC2C900DF1355 /* tabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabViewController.swift; sourceTree = "<group>"; };
 		E1890C95220EC8BA00DF1355 /* myGalleyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myGalleyController.swift; sourceTree = "<group>"; };
 		E1890C972219A34000DF1355 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		E1FB96032225935E00E47AA2 /* collcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collcell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		E102F90F2207F572002CBE68 /* Arean */ = {
 			isa = PBXGroup;
 			children = (
+				E1FB96022225934200E47AA2 /* myGalley */,
 				E1512DCD22083AA300E2544D /* FireBase */,
 				E102F93E2207F688002CBE68 /* controller */,
 				E102F9102207F572002CBE68 /* AppDelegate.swift */,
@@ -184,6 +187,14 @@
 				E1512DCE22083AB100E2544D /* CameraControllerData.swift */,
 			);
 			path = FireBase;
+			sourceTree = "<group>";
+		};
+		E1FB96022225934200E47AA2 /* myGalley */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB96032225935E00E47AA2 /* collcell.swift */,
+			);
+			name = myGalley;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +392,7 @@
 				E1512DCF22083AB100E2544D /* CameraControllerData.swift in Sources */,
 				E1890C96220EC8BA00DF1355 /* myGalleyController.swift in Sources */,
 				E102F9422207FB58002CBE68 /* cameraController.swift in Sources */,
+				E1FB96042225935E00E47AA2 /* collcell.swift in Sources */,
 				E1890C922209690A00DF1355 /* areaViewController.swift in Sources */,
 				E1890C94220EC2C900DF1355 /* tabViewController.swift in Sources */,
 				E102F9112207F572002CBE68 /* AppDelegate.swift in Sources */,
