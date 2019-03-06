@@ -10,19 +10,29 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 import FirebaseStorage
-class AreaViewController:UIViewController{
+import CoreLocation
+class AreaViewController:UIViewController,CLLocationManagerDelegate{
     
     var DBRef :DatabaseReference!
     
     
     @IBOutlet weak var mainView: UIView!
     
-    var afterView : UIView?
+   
+    @IBOutlet weak var naviView: UIView!
     
+    
+    var afterView : UIView?
+     let locationManager = CLLocationManager()
+    var x:String?
+    var y:String?
+    var l_do:String?
+    var l_si:String?
+    var l_dong:String?
+    var loadStatus = false
     
     override func viewDidLoad() {
-         let storage = Storage.storage()
-        DBRef = Database.database().reference()
+    
         
         /*
         DBRef.child("Dic").observe(.childAdded) { (do_Snapshot) in
@@ -78,13 +88,15 @@ class AreaViewController:UIViewController{
             
             
         }*/
-        
+             /*
         let dateFormatter = DateFormatter()
         
         dateFormatter.locale = Locale(identifier: "ko_KR")
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let date = dateFormatter.string(from: Date())
         
+  
+   
         DBRef.child("AreaImage").queryOrdered(byChild: "timestamp").queryLimited(toLast: 1).observe(.childAdded) { (DataSnapshot) in
             let value = DataSnapshot.value as? NSDictionary
             
@@ -118,7 +130,7 @@ class AreaViewController:UIViewController{
                 }
             })
         }
-    
+    */
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -134,6 +146,120 @@ class AreaViewController:UIViewController{
     
     override func viewDidDisappear(_ animated: Bool) {
         //DBRef.child("AreaImage").removeAllObservers()
+    }
+    
+    override func viewDidLayoutSubviews() {
+      
+    }
+    
+    override func viewWillLayoutSubviews() {
+        let storage = Storage.storage()
+        DBRef = Database.database().reference()
+        
+        locationManager.delegate = self
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
+            startGps()
+        }else{
+            locationManager.requestWhenInUseAuthorization()
+            //권한 취소시
+            
+        }
+    }
+    
+    func startGps(){
+        
+        locationManager.startUpdatingLocation()
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if let coor=manager.location?.coordinate{
+            self.x=String(coor.latitude)
+            self.y=String(coor.longitude)
+            
+            
+            let geo=CLGeocoder()
+            let local=Locale(identifier: "Ko-kr")
+            geo.reverseGeocodeLocation(CLLocation(latitude: coor.latitude, longitude: coor.longitude), completionHandler: {
+                (place,error) in
+                self.l_do=place?.last?.administrativeArea
+                self.l_si=place?.last?.locality
+                self.l_dong=place?.last?.subLocality
+                
+                self.locationManager.stopUpdatingLocation()
+                if (self.l_do! != nil && self.l_si! != nil && self.l_dong! != nil){
+                    print("location")
+                    
+                    self.loadImage()
+                }
+                
+                
+            })
+        }
+        
+    }
+    
+    func loadImage(){
+       //child(self.l_do!).child(self.l_si!).child(self.l_dong!)
+        
+        
+        
+        
+        
+         if self.loadStatus == false  {
+        self.DBRef.child("ImageAreaV1").child(self.l_do!).queryOrdered(byChild: "timestamp").queryLimited(toLast: 1).observe(.childAdded) { (DataSnapshot) in
+           
+            
+                let value = DataSnapshot.value as? NSDictionary
+                print(value)
+                Storage.storage().reference(withPath: "AreaImage/"+(value?["date"] as! String)+"/"+DataSnapshot.key+".jpg").getData(maxSize: 5*1024*1024 , completion: { iData, error in
+                    if let Err = error {
+                        print(Err)
+                    }else{
+                        
+                        
+                        
+                        
+                        
+                        let image = UIImage(data: iData!)
+                        let imageView = UIImageView()
+                        imageView.image=image
+                        
+
+                        let beFrame = CGRect(x: 0, y: (self.mainView.frame.maxY+self.mainView.frame.height)*(-1), width: self.mainView.frame.width, height: self.mainView.frame.height)
+                        imageView.frame = beFrame
+                        self.mainView.addSubview(imageView)
+                        
+                        
+                        UIView.animate(withDuration: 2, animations: {
+                            imageView.frame = self.mainView.frame
+                        }, completion: { (Bool) in
+                            if self.afterView != nil {
+                                self.mainView.willRemoveSubview(self.afterView!)
+                            }
+                        })
+                        self.afterView = imageView
+                        
+                        
+                        self.DBRef.child("AreaView").child(DataSnapshot.key).setValue([UserDefaults.standard.value(forKey: "id") as! String:"true"])
+                        
+                        
+                        let labelView = UILabel()
+                        labelView.textAlignment = NSTextAlignment.center
+                        labelView.text = (value?["do"] as! String) + " " + (value?["si"] as! String) + " " + (value?["dong"] as! String)
+                        labelView.backgroundColor = UIColor(displayP3Red: 255, green: 255, blue: 255, alpha: 0.5)
+                        labelView.frame = CGRect(x: imageView.frame.maxX-150, y: imageView.frame.maxY-20, width: 150, height: 20)
+                        
+                        imageView.addSubview(labelView)
+                        
+                    }
+                })
+            
+            
+           
+           
+        }
+             }
+        self.loadStatus = true
     }
     
 }

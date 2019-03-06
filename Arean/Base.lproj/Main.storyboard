@@ -86,17 +86,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLZ-2f-YQe">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yun-Os-G7h">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLZ-2f-YQe">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mLZ-2f-YQe" secondAttribute="bottom" id="Ljy-ES-42v"/>
+                                    <constraint firstItem="mLZ-2f-YQe" firstAttribute="leading" secondItem="Yun-Os-G7h" secondAttribute="leading" id="eJu-YU-dEN"/>
+                                    <constraint firstItem="mLZ-2f-YQe" firstAttribute="top" secondItem="Yun-Os-G7h" secondAttribute="top" id="end-V5-RcN"/>
+                                    <constraint firstAttribute="trailing" secondItem="mLZ-2f-YQe" secondAttribute="trailing" id="p5r-7X-5mc"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MnX-H6-uyP" firstAttribute="bottom" secondItem="mLZ-2f-YQe" secondAttribute="bottom" id="VDB-X4-oAZ"/>
-                            <constraint firstItem="MnX-H6-uyP" firstAttribute="trailing" secondItem="mLZ-2f-YQe" secondAttribute="trailing" id="Wtc-om-9MZ"/>
-                            <constraint firstItem="mLZ-2f-YQe" firstAttribute="top" secondItem="MnX-H6-uyP" secondAttribute="top" id="wgA-Xk-0em"/>
-                            <constraint firstItem="mLZ-2f-YQe" firstAttribute="leading" secondItem="MnX-H6-uyP" secondAttribute="leading" id="yhM-gN-2MX"/>
+                            <constraint firstItem="Yun-Os-G7h" firstAttribute="leading" secondItem="MnX-H6-uyP" secondAttribute="leading" id="2GT-SS-9IM"/>
+                            <constraint firstItem="Yun-Os-G7h" firstAttribute="trailing" secondItem="MnX-H6-uyP" secondAttribute="trailing" id="LUp-CD-OMo"/>
+                            <constraint firstItem="Yun-Os-G7h" firstAttribute="bottom" secondItem="MnX-H6-uyP" secondAttribute="bottom" id="cK4-gR-6aM"/>
+                            <constraint firstItem="Yun-Os-G7h" firstAttribute="trailing" secondItem="MnX-H6-uyP" secondAttribute="trailing" id="lVE-HU-zrG"/>
+                            <constraint firstItem="Yun-Os-G7h" firstAttribute="bottom" secondItem="MnX-H6-uyP" secondAttribute="bottom" id="qif-dO-uTk"/>
+                            <constraint firstItem="Yun-Os-G7h" firstAttribute="top" secondItem="MnX-H6-uyP" secondAttribute="top" id="t1M-23-Qss"/>
+                            <constraint firstItem="Yun-Os-G7h" firstAttribute="leading" secondItem="MnX-H6-uyP" secondAttribute="leading" id="uhU-AF-7KC"/>
+                            <constraint firstItem="Yun-Os-G7h" firstAttribute="top" secondItem="MnX-H6-uyP" secondAttribute="top" id="zS7-mA-twB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MnX-H6-uyP"/>
                     </view>
@@ -107,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vkb-5q-mwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-154" y="-626"/>
+            <point key="canvasLocation" x="-154.40000000000001" y="-626.53673163418296"/>
         </scene>
         <!--C-->
         <scene sceneID="lEd-4X-AaX">

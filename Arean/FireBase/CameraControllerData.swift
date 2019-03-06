@@ -68,6 +68,18 @@ class CameraControllerData {
             "si":si_l,
             "dong":dong_l
             ])
+        
+        //child(do_l).child(si_l).child(dong_l).child(uuid)
+        self.DBref.child("ImageAreaV1").child(do_l).child(uuid).setValue([
+            "id":UserDefaults.standard.value(forKey: "id"),
+            "x":x,
+            "y":y,
+            "date":date,
+            "timestamp":timestamp,
+            "do":do_l,
+            "si":si_l,
+            "dong":dong_l
+            ])
         self.DBref.child("AreaGellay").child(userUid as! String).child(uuid).setValue(["timestamp":timestamp])
         //self.DBref.child("Dic").child(do_l).child(si_l).child(dong_l).setValue(["t":"t"])
 

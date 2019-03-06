@@ -38,6 +38,7 @@ class myGalleyController:UIViewController,UICollectionViewDelegate,UICollectionV
            
             
             self.collView.performBatchUpdates({
+                
                 let value = DataSnapshot.value as? NSDictionary
                 let index = IndexPath(row: self.images.count, section: 0)
                 self.imageDate.append(value?["timestamp"] as! String)
